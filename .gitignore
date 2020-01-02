@@ -109,6 +109,9 @@ dist
 # Next files
 .next
 
+
+# additional logs throughout dev
+
 .DS_Store
 
 .vscode*
