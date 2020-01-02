@@ -108,3 +108,7 @@ dist
 
 # Next files
 .next
+
+.DS_Store
+
+.vscode*
