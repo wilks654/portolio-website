@@ -28,14 +28,13 @@ let style = <style jsx>{`
           width : 100%;
           height : 100%;
           background : url('/stock-background.jpg');
-          filter : blur(1px);
+          filter : blur(2px);
         }
 
         #content-container {
           position : absolute;
           width : 100%;
-          height : 100%;
-          top : 0em;
+          top : 20%;
           left : 0em;
           z-index : 2;
         }
@@ -48,10 +47,7 @@ let style = <style jsx>{`
           opacity : 0.8;
         }
 
-        #content-container > * {
-          position : relative;
-          z-index : 2;
-        }
+        
 
         `} 
 </style>
@@ -85,7 +81,7 @@ const Index = () => (
           height : 100%;
           padding: none;
           margin: 0;
-
+          color : #F5F6F2;
         }
         
         html {
