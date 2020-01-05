@@ -37,6 +37,9 @@ let style = <style jsx>{`
             transition: all 1s;
             z-index : 4;
             opacity : 1;
+            align-items:center;
+            display:flex;
+            justify-content:center;
         }
 
         #menu-head {
@@ -62,10 +65,11 @@ let style = <style jsx>{`
         #menu-head.open , #menu-body.open  {
             transition: all 1s;
             top : 0em;
+            
         }
 
         #menu-body #list {
-            margin-top : 20%;
+            
             max-height : 60%;
             overflow : scroll;
             position : relative;
@@ -88,8 +92,7 @@ let style = <style jsx>{`
             width : 10em;
             height : 10em;
             background-color : white;
-            margin-left : auto;
-            margin-right : auto;
+           
             border-radius : 60%;
             border-style : solid;
             border-width : 3px;

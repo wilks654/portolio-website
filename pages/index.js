@@ -26,17 +26,22 @@ let style = <style jsx>{`
         #content-container {
           position : absolute;
           width : 100%;
-          top : 20%;
+         
           left : 0em;
           z-index : 2;
         }
 
-        #overlay {
+        
+
+        #index {
           position : absolute;
           width : 100%;
           height : 100%;
-          background-color : #253c4d;
-          opacity : 0.8;
+          display: flex;
+          align-items:center;
+          
+          justify-content:center;
+          overflow: hidden;
         }
 
         
@@ -45,7 +50,7 @@ let style = <style jsx>{`
 </style>
 
 const Index = () => (
-    <div id = ''>
+    <div id = 'index'>
       <Head>
         <title>Sam Wilkinson - Portfolio</title>
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet"></link>
@@ -88,6 +93,9 @@ const Index = () => (
           position : relative;
           
         }
+
+        
+
         `
       }
       </style>
