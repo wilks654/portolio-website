@@ -1,4 +1,6 @@
 import Hamburger from '../components/Hamburger';
+import Overlay from '../components/Overlay';
+import BackgroundImage from '../components/BackgroundImage';
 import Head from 'next/head';
 
 let style = <style jsx>{`
@@ -19,16 +21,6 @@ let style = <style jsx>{`
 
         #images-container img:hover {
           cursor : pointer;
-        }
-
-        #background-image {
-          position : absolute;
-          top: 0em;
-          left: 0em;
-          width : 100%;
-          height : 100%;
-          background : url('/stock-background.jpg');
-          filter : blur(2px);
         }
 
         #content-container {
@@ -60,8 +52,9 @@ const Index = () => (
       </Head>  
 
       <Hamburger />
-      <div id = 'background-image' />
-      <div id = 'overlay' />
+      <Overlay />
+      <BackgroundImage />
+      
         
       <div id = 'content-container'>
         <h3>Sam Wilkinson</h3>
@@ -95,8 +88,6 @@ const Index = () => (
           position : relative;
           
         }
-
-        
         `
       }
       </style>
