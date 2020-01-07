@@ -67,8 +67,11 @@ const Index = () => (
       
         
       <div id = 'content-container'>
-        <h3>Sam Wilkinson</h3>
-        <i></i>
+        
+        <div className = 'header-container'>
+         <h3>Sam <span>Wilkinson</span></h3>
+        </div>
+        
         <div id = 'images-container'>
           <img src='/github.png' alt="github logo" />
           <img src='/codepen.svg' alt="codepen logo" />
@@ -99,8 +102,16 @@ const Index = () => (
           
         }
 
+        #header-container {
+          display : flex;
+        }
+
         #mobile-resolution {
           display : none;
+        }
+
+        span {
+          color : #F36865;
         }
 
         @media (max-width: 700px) {
