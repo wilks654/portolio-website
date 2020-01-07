@@ -1,9 +1,9 @@
 import Hamburger from '../components/Hamburger';
-export default function About() {
+export default function Contact() {
     return (
       <div>
         <Hamburger />
-        <p>This is the about page</p>
+        <p>This is the contact page</p>
       </div>
     );
   }

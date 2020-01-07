@@ -154,8 +154,12 @@ export default function Hamburger () {
                     <Link href = 'about'>
                     <div>About</div>
                     </Link>
-                    <div>Work</div>
+                    <Link href = 'showcase'>
+                        <div>Work</div>
+                    </Link>
+                    <Link href = 'contact'>
                     <div>Contact</div>
+                    </Link>
                     
                 </div>
             </div>    
