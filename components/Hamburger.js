@@ -9,9 +9,12 @@ let style = <style jsx>{`
             z-index : 5;
         }
 
+        #hamburger.open div {
+            background-color : white;
+        }
+
         #hamburger.open #first {
             transform: rotate(45deg);
-
         }
 
         #hamburger.open #second {
@@ -26,9 +29,11 @@ let style = <style jsx>{`
             cursor : pointer;
         }
 
-        #hamburger > * {
+        #hamburger div {
             transform-origin: left;
             transition: all 1s;
+            ##transition: opacity 1s;
+            ##transition: background-color .5s 1s;
             width : 2.1em;
             height : .25em;
             background-color : black;
@@ -38,7 +43,6 @@ let style = <style jsx>{`
         #menu-head, #menu-body {
             transition: all 1s;
             z-index : 4;
-            opacity : 1;
             align-items:center;
             display:flex;
             justify-content:center;
@@ -48,31 +52,30 @@ let style = <style jsx>{`
             position : absolute;
             left : -100%;
             top : 0em;
-            background-color : #EA8789;
-            width : 50%;
-            height : 100%;
-
+            background-color : rgba(15, 24, 30, 0.75);
+            width : 100%;
+            height : 12.5%;
+            
         }
 
         #menu-body {
             position : absolute;
-            top : 100%;
-            right : 0em;
-            background-color : #F36865;
-            width : 50%;
-            height : 100%;
+            top : 12.5%;
+            left : 100%;
+            background-color : rgba(15, 24, 30, 0.5);
+            width : 100%;
+            height : 87.5%;
             
         }
 
         #menu-head.open , #menu-body.open  {
             transition: all 1s;
-            top : 0em;
-            
+            left : 0em;
         }
 
+        
+
         #menu-body #list {
-            
-            
             overflow : scroll;
             position : relative;
             color : white;
@@ -89,18 +92,32 @@ let style = <style jsx>{`
 
         #menu-body #list > div:hover{
             cursor : pointer;
+            text-decoration : underline;
+            color : #F36865;
         }
 
         #avatar {
-            width : 10em;
-            height : 10em;
+            width : 0em;
+            height : 0em;
             background-color : white;
-           
             border-radius : 60%;
             border-style : solid;
-            border-width : 3px;
-            border-color : black;
+            border-width : 0px;
+            border-color : #F36865;
+            margin-top : 6em;
+            transition: all 1s 0s;
+            position : relative;
+            z-index : 10;
+        }
 
+        #menu-head.open#avatar.active {
+            transition: all 1s 1s;
+        }
+
+        #menu-head.open #avatar {
+            width : 10em;
+            height : 10em;
+            border-width : 3px;
         }
 
         `} 
