@@ -16,6 +16,8 @@ export default function BackgroundImage(props) {
             height : 100%;
             background : url(`+ url +`);
             filter : blur(2px);
+            background-repeat:no-repeat;
+            background-position: top center;
           }
 
     `} 

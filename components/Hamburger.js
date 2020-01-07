@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 let style = <style jsx>{`
         #hamburger {
             position : absolute;
@@ -44,8 +46,8 @@ let style = <style jsx>{`
 
         #menu-head {
             position : absolute;
-            top : -100%;
-            left : 0em;
+            left : -100%;
+            top : 0em;
             background-color : #EA8789;
             width : 50%;
             height : 100%;
@@ -70,13 +72,14 @@ let style = <style jsx>{`
 
         #menu-body #list {
             
-            max-height : 60%;
+            
             overflow : scroll;
             position : relative;
             color : white;
             display : grid;
             grid-gap : 4em;
             z-index : 4;
+            overflow : hidden;
         }
 
         #menu-body #list > div {
@@ -131,7 +134,9 @@ export default function Hamburger () {
 
 
                     <div>Home</div>
+                    <Link href = 'about'>
                     <div>About</div>
+                    </Link>
                     <div>Work</div>
                     <div>Contact</div>
                     

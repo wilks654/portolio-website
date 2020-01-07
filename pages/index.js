@@ -52,11 +52,16 @@ let style = <style jsx>{`
 const Index = () => (
     <div id = 'index'>
       <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Sam Wilkinson - Portfolio</title>
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet"></link>
       </Head>  
+      <div id = 'mobile-resolution'>
+        <Hamburger />
+      </div>
 
-      <Hamburger />
+
+
       <Overlay />
       <BackgroundImage />
       
@@ -94,7 +99,15 @@ const Index = () => (
           
         }
 
-        
+        #mobile-resolution {
+          display : none;
+        }
+
+        @media (max-width: 700px) {
+          #mobile-resolution {
+            display: block;
+          }
+        }
 
         `
       }
