@@ -6,6 +6,7 @@ export default function Contact() {
 
         <div id = 'contact'>
           <h1>Contact</h1>
+          <div>samwilkinson.jobsearch@gmail.com</div>
         </div>
         <style jsx>
           {
@@ -13,7 +14,7 @@ export default function Contact() {
             #contact {
               width : 80%;
               height : 80%;
-              color : black;
+
               overflow : scroll;
             }
 
@@ -22,6 +23,17 @@ export default function Contact() {
               color : var(--secondary);
               margin : none;
             }
+
+            #contact div {
+              display : inline-block;
+              border-style : solid;
+              border-color : var(--light);
+              border-width : 1px;
+              padding : .5em;
+            }
+
+           
+
             `
           }
         </style>  

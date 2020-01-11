@@ -31,6 +31,7 @@ export default function Layout (props) {
                                 --primary-opaque-light : rgba(15, 24, 30, 0.5);
                                 --secondary : #F36865;
                                 --light : #F5F6F2;
+                                --light-opaque: rgb(245,246,242, 0.7)
                               }
 
 

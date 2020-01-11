@@ -8,6 +8,7 @@ let style = <style jsx>{`
         h3 {
           text-align : center;
           font-size : 4em;
+          margin : .25em;
         }
 
         #images-container {
@@ -27,6 +28,8 @@ let style = <style jsx>{`
         }
 
         #content-container {
+          display : grid;
+          grid-gap : 1em;
           position : absolute;
           width : 100%;
           left : 0em;
@@ -43,13 +46,19 @@ let style = <style jsx>{`
           overflow: hidden;
         }
 
-        #header-container {
-          display : flex;
-        }
+        
 
         span {
           color : #F36865;
         }
+
+        .sub-header {
+          font-style : italic;
+          text-align : center;
+          color : var(--light-opaque);
+        }
+
+        
 
         `} 
 </style>
@@ -66,9 +75,11 @@ const Index = () => (
           <div id = 'content-container'>
             
             <div className = 'header-container'>
-            <h3>Sam <span>Wilkinson</span></h3>
+              <h3>Sam <span>Wilkinson</span></h3>
             </div>
-            
+            <div className = 'sub-header'>
+              Full Stack Developer, Cambridge UK
+            </div>
             <div id = 'images-container'>
               <img src='/github.png' alt="github logo" />  
               <img src='/l-in.png' alt="linked-in logo" />
