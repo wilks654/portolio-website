@@ -1,7 +1,8 @@
-import Hamburger from '../components/Hamburger';
+
+import Layout from '../components/Layout';
 import Overlay from '../components/Overlay';
 import BackgroundImage from '../components/BackgroundImage';
-import Head from 'next/head';
+
 
 let style = <style jsx>{`
         h3 {
@@ -17,6 +18,8 @@ let style = <style jsx>{`
         #images-container img {
           width : 2.75em;
           height : 2.5em;
+          margin-left : .5em;
+          margin-right : .5em;
         }
 
         #images-container img:hover {
@@ -26,12 +29,9 @@ let style = <style jsx>{`
         #content-container {
           position : absolute;
           width : 100%;
-         
           left : 0em;
           z-index : 2;
         }
-
-        
 
         #index {
           position : absolute;
@@ -39,91 +39,62 @@ let style = <style jsx>{`
           height : 100%;
           display: flex;
           align-items:center;
-          
           justify-content:center;
           overflow: hidden;
-        }
-
-        
-
-        `} 
-</style>
-
-const Index = () => (
-    <div id = 'index'>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Sam Wilkinson - Portfolio</title>
-        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet"></link>
-      </Head>  
-      <div id = 'mobile-resolution'>
-        <Hamburger />
-      </div>
-
-
-
-      <Overlay />
-      <BackgroundImage />
-      
-        
-      <div id = 'content-container'>
-        
-        <div className = 'header-container'>
-         <h3>Sam <span>Wilkinson</span></h3>
-        </div>
-        
-        <div id = 'images-container'>
-          <img src='/github.png' alt="github logo" />
-          <img src='/codepen.svg' alt="codepen logo" />
-          <img src='/l-in.png' alt="linked-in logo" />
-        </div>
-      </div>  
-      
-      {style}
-      <style jsx global> 
-      {`
-        html, body {
-          width : 100%;
-          height : 100%;
-          padding: none;
-          margin: 0;
-          color : #F5F6F2;
-        }
-        
-        html {
-          font-family: 'Source Sans Pro', sans-serif;
-        }
-
-        body {
-          
-          #background: url(/stock-background.jpg) no-repeat center center scroll;
-          background-blend-mode: lighten;
-          position : relative;
-          
         }
 
         #header-container {
           display : flex;
         }
 
-        #mobile-resolution {
-          display : none;
-        }
-
         span {
           color : #F36865;
         }
 
-        @media (max-width: 700px) {
-          #mobile-resolution {
-            display: block;
-          }
-        }
+        `} 
+</style>
+
+const Index = () => (
+        
+        <Layout location = 'index'>
+          
+          <Overlay />
+          <BackgroundImage />
+          
+              
+          
+          <div id = 'content-container'>
+            
+            <div className = 'header-container'>
+            <h3>Sam <span>Wilkinson</span></h3>
+            </div>
+            
+            <div id = 'images-container'>
+              <img src='/github.png' alt="github logo" />  
+              <img src='/l-in.png' alt="linked-in logo" />
+            </div>
+          </div>  
+          {style}
+      </Layout>
+
+);
+  
+export default Index;
+
+/*
+<style jsx global> 
+      {`
+        
+
+       
+<img src='/codepen.svg' alt="codepen logo" />
+        
+
+        
 
         `
       }
       </style>
     </div>
-);
-  
-export default Index;
+
+*/

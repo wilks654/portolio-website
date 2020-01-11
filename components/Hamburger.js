@@ -99,11 +99,15 @@ let style = <style jsx>{`
         #avatar {
             width : 0em;
             height : 0em;
-            background-color : white;
+            background-image : url('/avatar.png');
+            background-color : var(--primary);
+            background-size: cover;
+            background-repeat:no-repeat;
+            background-position: top center;
             border-radius : 60%;
             border-style : solid;
             border-width : 0px;
-            border-color : #F36865;
+            border-color : var(--secondary);
             margin-top : 6em;
             transition: all 1s 0s;
             position : relative;
@@ -118,6 +122,16 @@ let style = <style jsx>{`
             width : 10em;
             height : 10em;
             border-width : 3px;
+        }
+
+        #hamburger-container {
+            display : none;
+          }
+  
+        @media (max-width: 700px) {
+        #hamburger-container {
+            display: block;
+        }
         }
 
         `} 
@@ -137,9 +151,9 @@ let toggleHamburger = () => {
 }
 
 //on click inject overlay
-export default function Hamburger () { 
+export default function Hamburger (props) { 
     return (
-        <div>
+        <div id = 'hamburger-container'>
             <div id = 'hamburger' onClick = {() => toggleHamburger()}>
                 <div id = 'first' />
                 <div id = 'second' />
@@ -148,18 +162,29 @@ export default function Hamburger () {
             </div>
             <div id = 'menu-body'>
                 <div id = 'list'>
+                    {props.location !== 'index' &&
+                        <Link href = '/'>
+                            <div>Home</div>
+                        </Link>
+                    }
 
+                    {props.location !== 'about' &&
+                        <Link href = 'about'>
+                            <div>About</div>
+                        </Link>
+                    }
 
-                    <div>Home</div>
-                    <Link href = 'about'>
-                    <div>About</div>
-                    </Link>
-                    <Link href = 'showcase'>
-                        <div>Work</div>
-                    </Link>
-                    <Link href = 'contact'>
-                    <div>Contact</div>
-                    </Link>
+                    {props.location !== 'showcase' &&
+                        <Link href = 'showcase'>
+                            <div>Work</div>
+                        </Link>
+                    }   
+
+                    {props.location !== 'contact' &&
+                        <Link href = 'contact'>
+                            <div>Contact</div>
+                        </Link>
+                    }
                     
                 </div>
             </div>    
