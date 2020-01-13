@@ -80,9 +80,15 @@ const Index = () => (
             <div className = 'sub-header'>
               Full Stack Developer, Cambridge UK
             </div>
+
+            
             <div id = 'images-container'>
-              <img src='/github.png' alt="github logo" />  
-              <img src='/l-in.png' alt="linked-in logo" />
+              <a target="_blank" rel="noopener noreferrer" href = "https://github.com/wilks654">
+                <img src='/github.png' alt="github logo" />  
+              </a>
+              <a target="_blank" rel="noopener noreferrer" href = "http://linkedin.com/in/sam-wilkinson-944447109">
+                <img src='/l-in.png' alt="linked-in logo" />
+              </a>
             </div>
           </div>  
           {style}

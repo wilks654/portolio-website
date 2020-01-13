@@ -9,7 +9,10 @@ export default function Showcase() {
         <div id = 'showcase'>
           <h1>Showcase</h1>
           <div id = ''>
-          <ProjectCard background = '/website-thumbnail.png' />
+
+            <a target="_blank" rel="noopener noreferrer" href = "https://github.com/wilks654/portolio-website"> 
+              <ProjectCard background = '/website-thumbnail.png' />
+            </a>
           </div>
         </div>
         

@@ -119,8 +119,8 @@ let style = <style jsx>{`
         }
 
         #menu-head.open #avatar {
-            width : 10em;
-            height : 10em;
+            width : 9em;
+            height : 9em;
             border-width : 3px;
         }
 
